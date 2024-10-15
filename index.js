@@ -33,7 +33,9 @@ if(form){
             }
 
         
-            const response = await fetch(`http://localhost:3000/insertUser`, {
+            const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com
+
+/insertUser`, {
                 method: 'POST', // Definindo o método como POST
                 headers: {
                   'Content-Type': 'application/json' // Tipo do conteúdo enviado
@@ -54,7 +56,9 @@ if(form){
                 observacoes: observacoes
             }
         
-            const response = await fetch(`http://localhost:3000/updateUser`, {
+            const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com
+
+/updateUser`, {
                 method: 'POST', // Definindo o método como POST
                 headers: {
                   'Content-Type': 'application/json' // Tipo do conteúdo enviado
@@ -72,7 +76,9 @@ if(form){
 
 const fetchAndLogUsers = async () => {
     const getUsers = async () => {
-        const response = await fetch('http://localhost:3000/getUsers', {
+        const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com
+
+/getUsers`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
