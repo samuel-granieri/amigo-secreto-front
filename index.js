@@ -161,9 +161,7 @@ const handleDelete = async(id_user)=> {
         _id: id_user
     }
     
-    const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com
-
-        /deleteUser`,
+    const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com/deleteUser`,
         // const response = await fetch(`http://localhost:3000/deleteUser`, 
         
         {
@@ -174,6 +172,7 @@ const handleDelete = async(id_user)=> {
             body: JSON.stringify(data) // Convertendo os dados para JSON
         });
                     //alert('Registro deletado com sucesso!')
+    alert('Registro deletado com sucesso!')
     window.location.reload()
     return await response.json() // Convertendo a resposta em JSON
     
