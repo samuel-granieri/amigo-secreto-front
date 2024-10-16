@@ -42,7 +42,7 @@ if(form){
                 },
                 body: JSON.stringify(data) // Convertendo os dados para JSON
             });
-            
+            alert('Registro salvo com sucesso!')
             return await response.json(); // Convertendo a resposta em JSON
         }
         else{
@@ -65,6 +65,7 @@ if(form){
                 },
                 body: JSON.stringify(data) // Convertendo os dados para JSON
             });
+            alert('Registro editado com sucesso!')
             editMode = true
             return await response.json(); // Convertendo a resposta em JSON
             
