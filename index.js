@@ -36,7 +36,7 @@ if(form){
 
 
         
-            const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com
+            const response = await fetch(`https://0a4e-179-0-65-109.ngrok-free.app
 
 /insertUser`, {
                 method: 'POST', // Definindo o método como POST
@@ -60,7 +60,7 @@ if(form){
                 observacoes: observacoes
             }
         
-            const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com
+            const response = await fetch(`https://0a4e-179-0-65-109.ngrok-free.app
 
 /updateUser`, {
                 method: 'POST', // Definindo o método como POST
@@ -84,7 +84,7 @@ if(form){
 
 const fetchAndLogUsers = async () => {
     const getUsers = async () => {
-        const response = await fetch(`https://amigo-secreto-back-h9n4.onrender.com
+        const response = await fetch(`https://0a4e-179-0-65-109.ngrok-free.app
 
 /getUsers`, {
             method: 'GET',
