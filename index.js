@@ -36,7 +36,7 @@ if(form){
 
 
         
-            const response = await fetch(`http://85d5-179-0-65-109.ngrok-free.app/insertUser`, {
+            const response = await fetch(`https://samucadev.com.br/insertUser`, {
                 method: 'POST', // Definindo o método como POST
                 headers: {
                   'Content-Type': 'application/json' // Tipo do conteúdo enviado
@@ -58,7 +58,7 @@ if(form){
                 observacoes: observacoes
             }
         
-            const response = await fetch(`http://85d5-179-0-65-109.ngrok-free.app/updateUser`, {
+            const response = await fetch(`https://samucadev.com.br/updateUser`, {
                 method: 'POST', // Definindo o método como POST
                 headers: {
                   'Content-Type': 'application/json' // Tipo do conteúdo enviado
@@ -80,7 +80,7 @@ if(form){
 
 const fetchAndLogUsers = async () => {
     const getUsers = async () => {
-        const response = await fetch(`http://85d5-179-0-65-109.ngrok-free.app/getUsers`, {
+        const response = await fetch(`https://samucadev.com.br/getUsers`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -155,7 +155,7 @@ const handleDelete = async(id_user)=> {
         _id: id_user
     }
     
-    const response = await fetch(`http://85d5-179-0-65-109.ngrok-free.app/deleteUser`,
+    const response = await fetch(`https://samucadev.com.br/deleteUser`,
         // const response = await fetch(`http://localhost:3000/deleteUser`, 
         
         {
