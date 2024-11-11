@@ -96,14 +96,14 @@ const fetchAndLogUsers = async () => {
     const old_innerHtml = div_tabela.innerHTML
 
     div_tabela.innerHTML = `
-        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        
         <div class="text-center">
             <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
             <span class="sr-only"></span>
             </div>
             <p class="mt-3">Carregando linhas da tabela...</p>
         </div>
-        </div>
+        
     `
 
     // Obtendo e exibindo o resultado da função
