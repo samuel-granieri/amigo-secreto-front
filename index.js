@@ -98,10 +98,10 @@ const fetchAndLogUsers = async () => {
     div_tabela.innerHTML = `
         
         <div class="text-center">
-            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <div class="spinner-border" role="status" style="width: 3rem; height: 3rem;">
             <span class="sr-only"></span>
             </div>
-            <p class="mt-3">Carregando linhas da tabela...</p>
+            <p class="mt-3">Carregando tabela...</p>
         </div>
         
     `

@@ -1,0 +1,25 @@
+/* Estilos adicionais de Natal */
+.navbar {
+    background-color: #b30000; /* Vermelho Natalino */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-brand i {
+    color: #00cc00; /* Verde para o ícone de Natal */
+}
+
+.navbar-nav .nav-link:hover {
+   color: #ffd700 !important; /* Dourado no hover */
+}
+
+.btn{
+    background-color: #b30000;
+    color: #ffffff;
+}
+
+.spinner-border{
+    color: #b30000;
+}
