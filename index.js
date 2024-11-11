@@ -89,41 +89,27 @@ const fetchAndLogUsers = async () => {
         return await response.json(); // Convertendo a resposta em JSON
     };
 
+    
+    //enquanto user nao carrega, mostrar loading
+    div_tabela = document.getElementById('info_participantes')
+    div_tabela.innerHTML = `
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="sr-only"></span>
+            </div>
+            <p class="mt-3">Carregando linhas da tabela...</p>
+        </div>
+        </div>
+    `
+
     // Obtendo e exibindo o resultado da função
     try {
         const users = await getUsers();
-        
+
         //renderizar tabela com registros inseridos
-        const div = document.getElementById("info_participantes")
-        console.log(div)
-
-        if(users){
-            div.innerHTML = `
-                <h2 class="mb-4">Informações dos Participantes</h2>
-        <div class="table-responsive">
-          <table class="table table-bordered table-striped">
-            <thead class="thead-dark">
-              <tr>
-                <th>Nome</th>
-                <th>Sapato</th>
-                <th>Blusa</th>
-                <th>Calça</th>
-                <th>Observações</th>
-                <th>Editar</th>
-                <th>Deletar</th>
-              </tr>
-            </thead>
-            <tbody id="table_body">
-              
-            </tbody>
-          </table>
-        </div>
-            `
-        
-        
         const table = document.getElementById("table_body")
-
-        if(table){
+        if(table && users){
             users.data.forEach(element => {
                 //gerar html
                 table.innerHTML += `
@@ -146,24 +132,11 @@ const fetchAndLogUsers = async () => {
       <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
     </svg>
     
-                        </td>
+                    </td>
     
-                    </tr>
-                `
-            });
-            
-        }
-    }else{
-        div.innerHTML = `
-            <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-  <div class="text-center">
-    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <p class="mt-3">Loading...</p>
-  </div>
-</div>
-        `
+                </tr>
+            `
+        });
     }
 
     } catch (error) {
