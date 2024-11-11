@@ -92,6 +92,9 @@ const fetchAndLogUsers = async () => {
     
     //enquanto user nao carrega, mostrar loading
     div_tabela = document.getElementById('info_participantes')
+
+    const old_innerHtml = div_tabela.innerHTML
+
     div_tabela.innerHTML = `
         <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="text-center">
@@ -106,6 +109,8 @@ const fetchAndLogUsers = async () => {
     // Obtendo e exibindo o resultado da função
     try {
         const users = await getUsers();
+        //devolve conteudo antigo
+        div_tabela.innerHTML = old_innerHtml
 
         //renderizar tabela com registros inseridos
         const table = document.getElementById("table_body")
